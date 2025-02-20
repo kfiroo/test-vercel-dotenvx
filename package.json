@@ -2,8 +2,10 @@
   "private": true,
   "scripts": {
     "dotenvx": "dotenvx",
+    "env:encrypt": "dotenvx encrypt && dotenvx encrypt -f .env.production",
+    "env:decrypt": "dotenvx decrypt && dotenvx decrypt -f .env.production",
     "dev": "dotenvx run -- next dev --turbopack",
-    "build": "dotenvx decrypt && next build",
+    "build": "npm run env:decrypt && next build",
     "start": "next start"
   },
   "dependencies": {
