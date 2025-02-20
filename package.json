@@ -3,8 +3,8 @@
   "scripts": {
     "dotenvx": "dotenvx",
     "dev": "dotenvx run -- next dev --turbopack",
-    "build": "dotenvx run -- next build",
-    "start": "dotenvx run -- next start"
+    "build": "dotenvx decrypt && next build",
+    "start": "next start"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.36.0",
